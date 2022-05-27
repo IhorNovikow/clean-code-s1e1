@@ -1,33 +1,27 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
-.aaa {
+.eisenhower-matrix{
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.aaa img {
+.eisenhower-matrix__img{
   width: 100%;
 }
-.aaa .more_inf {
+.eisenhower-matrix__link{
   font-family: fantasy, cursive;
 }
-
-@media (max-width:768px) {
-  .aaa {
-    text-align: center;
-  }
-}
-.centered-main-page-element {
+.main-content{
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.main-content-list-line__name-mission{
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -117,12 +111,12 @@ li > label {
 li > input[type="text"] {
   width: 226px
 }
-button.delete img {
+.main-content-list-line__button-img{
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.main-content-list-line__button-img:hover {
   transform: rotateZ(0);
 }
 
@@ -144,4 +138,10 @@ ul li.editMode input[type=text] {
 
 ul li.editMode label {
   display:none;
+}
+
+@media (max-width:768px) {
+  .eisenhower-matrix{
+    text-align: center;
+  }
 }
