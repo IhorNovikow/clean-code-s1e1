@@ -26,10 +26,10 @@
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.main-content-join-block{
   display: flex;
 }
-ul {
+.main-content-list {
   margin:0;
   padding: 0px;
 }
