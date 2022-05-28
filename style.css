@@ -122,7 +122,6 @@
 .button-img:hover {
   transform: rotateZ(0);
 }
-
 /* Completed */
 .complete-content .list__name {
   text-decoration: line-through;
