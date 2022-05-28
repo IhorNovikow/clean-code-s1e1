@@ -16,20 +16,20 @@
 .eisenhower-matrix__link{
   font-family: fantasy, cursive;
 }
-.main-content{
+.main{
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.main-content-list-line__name-mission{
+.list__name, .section-input{
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.main-content-join-block{
+.section-join{
   display: flex;
 }
-.main-content-list {
+.list{
   margin:0;
   padding: 0px;
 }
@@ -111,17 +111,17 @@ li > label {
 li > input[type="text"] {
   width: 226px
 }
-.main-content-list-line__button-img{
+.button-img{
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.main-content-list-line__button-img:hover {
+.button-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+.complete-content .list__name{
   text-decoration: line-through;
   color: #888;
 }

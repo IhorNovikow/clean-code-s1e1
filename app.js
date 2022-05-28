@@ -10,9 +10,8 @@
 
 var taskInput=document.getElementById("new-task");//Add a new task.--------------------
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.querySelector(".main-content-list")//ul of #incompleteTasks-----------------------
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks----------------------------
-
+var incompleteTaskHolder=document.querySelector(".list")//ul of #incompleteTasks-----------------------
+var completedTasksHolder=document.querySelector(".complete-content")//ul of #incompleteTasks-----------------------
 
 //New task list item
 var createNewTaskElement=function(taskString){
@@ -33,19 +32,19 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className="main-content-list-line__name-mission";//-------------------------------------------
+    label.className="list__name";//-------------------------------------------
 
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="main-content-list-line__name-mission";//-------------------------------------------
+    editInput.className="input list__name";//-------------------------------------------
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="main-content-list-line__button";//-------------------------------------------
+    editButton.className="button button_edit";//-------------------------------------------
 
-    deleteButton.className="main-content-list-line__button-delete";//-------------------------------------------
+    deleteButton.className="button button_delete";//-------------------------------------------
     deleteButtonImg.src="./remove.svg";
-    deleteButtonImg.className="main-content-list-line__button-img"
+    deleteButtonImg.className="button-img"
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -85,7 +84,7 @@ var editTask=function(){
 
     var editInput=listItem.querySelector("input[type=text]");//-------------------------------------------
     var label=listItem.querySelector("label");//-------------------------------------------
-    var editBtn=listItem.querySelector(".main-content-list-line__button");//-------------------------------------------
+    var editBtn=listItem.querySelector(".button");//-------------------------------------------
     var containsClass=listItem.classList.contains("editMode");//-------------------------------------------
     //If class of the parent is .editmode
     if(containsClass){
@@ -157,8 +156,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");//-------------------------------------------
-    var editButton=taskListItem.querySelector("button.main-content-list-line__button");//-------------------------------------------
-    var deleteButton=taskListItem.querySelector("button.main-content-list-line__button-delete");//-------------------------------------------
+    var editButton=taskListItem.querySelector("button.button");//-------------------------------------------
+    var deleteButton=taskListItem.querySelector("button.button_delete");//-------------------------------------------
 
 
     //Bind editTask to edit button.
