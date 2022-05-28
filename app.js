@@ -33,7 +33,7 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
     deleteButtonImg.setAttribute('alt', 'Delete button')
-    
+
     p.innerText=taskString;
     p.className="list__name";//-------------------------------------------
 
@@ -85,7 +85,7 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector("input[type=text]");//-------------------------------------------
+    var editInput=listItem.querySelector(".input");//-------------------------------------------
     var p=listItem.querySelector("p");//-------------------------------------------
     var editBtn=listItem.querySelector(".button");//-------------------------------------------
     var containsClass=listItem.classList.contains("editMode");//-------------------------------------------
@@ -158,7 +158,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");//-------------------------------------------
+    var checkBox=taskListItem.querySelector(".list__checkbox");//-------------------------------------------
     var editButton=taskListItem.querySelector("button.button");//-------------------------------------------
     var deleteButton=taskListItem.querySelector("button.button_delete");//-------------------------------------------
 
@@ -173,7 +173,7 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 
 //cycle over incompleteTaskHolder ul list items
 //for each list item
-for (var i=0; i<incompleteTaskHolder.children.length;i++){
+for (var i=0; i<incompleteTaskHolder.children.length; i++){
 
     //bind events to list items chldren(tasksCompleted)
     bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
