@@ -8,7 +8,7 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("new-task");//Add a new task.--------------------
+var taskInput=document.querySelector(".section-input")//Add a new task.--------------------
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.querySelector(".list")//ul of #incompleteTasks-----------------------
 var completedTasksHolder=document.querySelector(".complete-content")//ul of #incompleteTasks-----------------------
@@ -22,8 +22,8 @@ var createNewTaskElement=function(taskString){
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     checkBox.className="list__checkbox"
-    //label
-    var label=document.createElement("label");//label
+    //p
+    var p=document.createElement("p");//p
     //input (text)
     var editInput=document.createElement("input");//text
     //button.edit
@@ -33,8 +33,8 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
-    label.innerText=taskString;
-    label.className="list__name";//-------------------------------------------
+    p.innerText=taskString;
+    p.className="list__name";//-------------------------------------------
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -52,7 +52,7 @@ var createNewTaskElement=function(taskString){
 
     //and appending.
     listItem.appendChild(checkBox);
-    listItem.appendChild(label);
+    listItem.appendChild(p);
     listItem.appendChild(editInput);
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
@@ -85,18 +85,18 @@ var editTask=function(){
     var listItem=this.parentNode;
 
     var editInput=listItem.querySelector("input[type=text]");//-------------------------------------------
-    var label=listItem.querySelector("label");//-------------------------------------------
+    var p=listItem.querySelector("p");//-------------------------------------------
     var editBtn=listItem.querySelector(".button");//-------------------------------------------
     var containsClass=listItem.classList.contains("editMode");//-------------------------------------------
     //If class of the parent is .editmode
     if(containsClass){
 
         //switch to .editmode
-        //label becomes the inputs value.
-        label.innerText=editInput.value;
+        //p becomes the inputs value.
+        p.innerText=editInput.value;
         editBtn.innerText="Edit";
     }else{
-        editInput.value=label.innerText;
+        editInput.value=p.innerText;
         editBtn.innerText="Save";
     }
 
