@@ -4,42 +4,42 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
-.eisenhower-matrix{
+.eisenhower-matrix {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.eisenhower-matrix__img{
+.eisenhower-matrix__img {
   width: 100%;
 }
-.eisenhower-matrix__link{
+.eisenhower-matrix__link {
   font-family: fantasy, cursive;
 }
-.main{
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.list__name, .section-input{
+.list__name, .section-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.section-join{
+.section-join {
   display: flex;
 }
-.list{
-  margin:0;
+.list {
+  margin: 0;
   padding: 0px;
 }
 .list-line, .title {
   list-style:none;
 }
-.input, .button{
+.input, .button {
   outline: none;
 }
-.list__checkbox{
+.list__checkbox {
   outline: none;
 }
 .button {
@@ -55,7 +55,7 @@
   color: #3a3a3a;
 }
 /* Heading */
-.title{
+.title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -64,7 +64,7 @@
   margin: 0;
   text-transform: uppercase;
 }
-.input{
+.input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -81,7 +81,7 @@
 }
 
 /* New Task */
-.title{
+.title {
   display: block;
   margin: 0 0 20px;
 }
@@ -112,9 +112,9 @@
   width: 226px;
 }
 .list-line > .input {
-  width: 226px
+  width: 226px;
 }
-.button-img{
+.button-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
@@ -124,22 +124,22 @@
 }
 
 /* Completed */
-.complete-content .list__name{
+.complete-content .list__name {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 .list .list-line .input {
-  display:none
+  display: none;
 }
 
 .list .list-line.editMode .input {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px;
 }
-.list .editMode .list__name{
-  display:none;
+.list .editMode .list__name {
+  display: none;
 }
 
 @media (max-width:768px) {
@@ -147,5 +147,5 @@
   .eisenhower-matrix{
     text-align: center;
   }
-  
+
 }
