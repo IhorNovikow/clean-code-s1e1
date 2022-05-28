@@ -21,7 +21,8 @@
   width: 500px;
   margin: 0 auto 0;
 }
-.list__name, .section-input {
+.list__name,
+.section-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -33,10 +34,12 @@
   margin: 0;
   padding: 0px;
 }
-.list-line, .title {
+.list-line,
+.title {
   list-style:none;
 }
-.input, .button {
+.input,
+.button {
   outline: none;
 }
 .list__checkbox {
